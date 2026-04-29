@@ -1,0 +1,26 @@
+{
+  "name": "Temperature Data Analysis",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12",
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {}
+  },
+  "postCreateCommand": "echo 'PS1=\"$ \"' >> ~/.bashrc && source ~/.bashrc",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "${containerEnv:PYTHON_PATH:/usr/local/bin/python}",
+        "python.formatting.provider": "black",
+        "jupyter.kernels.preferred": "python3"
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-toolsai.jupyter",
+        "ms-toolsai.jupyter-keymap",
+        "ms-toolsai.jupyter-renderers"
+      ]
+    }
+  },
+  "forwardPorts": [],
+  "remoteUser": "vscode"
+}
